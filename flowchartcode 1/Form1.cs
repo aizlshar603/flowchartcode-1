@@ -78,6 +78,7 @@ namespace flowchartcode_1
             SolidBrush drawBrush = new SolidBrush(Color.White);
             g.DrawString("good bye!", drawFont, drawBrush, 100, 90);
             Thread.Sleep(2500);
+            Application.Exit();
         }
     }
 }
