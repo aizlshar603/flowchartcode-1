@@ -41,23 +41,29 @@ namespace flowchartcode_1
         private void button1_Click(object sender, EventArgs e)
         {
             //make screen black
-            BackColor = Color.Black;
+            Graphics g = this.CreateGraphics();
+            g.Clear(Color.Black);
             Thread.Sleep(500);
             //say hello world
-            Graphics g = this.CreateGraphics();
+            
             Font drawFont = new Font("Arial", 16, FontStyle.Bold);
             SolidBrush drawBrush = new SolidBrush(Color.White);
             g.DrawString("Hello world!", drawFont, drawBrush, 100, 70);
             //wait 3 seconds
             Thread.Sleep(3000);
             //flash
-            BackColor = Color.Red;
+            g.Clear(Color.Red);
+            g.DrawString("Hello world!", drawFont, drawBrush, 100, 70);
             Thread.Sleep(300);
-            BackColor = Color.Black;
+            g.Clear(Color.Black);
+            g.DrawString("Hello world!", drawFont, drawBrush, 100, 70);
             Thread.Sleep(300);
-            BackColor = Color.Red;
+            g.Clear(Color.Red);
+            g.DrawString("Hello world!", drawFont, drawBrush, 100, 70);
             Thread.Sleep(300);
-            BackColor = Color.Black;
+            g.Clear(Color.Black);
+            g.DrawString("Hello world!", drawFont, drawBrush, 100, 70);
+            Thread.Sleep(300);
             //tell user to press exit
             g.DrawString("press exit button", drawFont, drawBrush, 100, 90);
             
